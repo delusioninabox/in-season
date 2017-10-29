@@ -1,0 +1,75 @@
+/****************************************** OPTIONS *********************/
+
+/************************* Filter Buttons */
+.filter {
+  background: $color-emerald;
+  color: $color-white;
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: $border-radius;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.filter.inactive {
+  background: #eee;
+  color: #999;
+}
+
+.filter:hover {
+  background: $color-mountain-meadow;
+  color: $color-white;
+}
+
+.filter.inactive:hover {
+  background: $color-silver;
+  color: #555;
+}
+
+.filter:before {
+    content: "+";
+    margin-right: 2px;
+}
+
+.filter.inactive:before {
+  content: "-";
+}
+
+/************************* Dropdown Month Select */
+select {
+  float: right;
+  padding: 6px 15px;
+  width: 50%;
+  max-width: 200px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  color: $color-emerald;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: $border-radius;
+  background-image: url('/assets/DropdownIcon@1x.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: 95% center;
+  border: 1px solid $color-boulder;
+}
+
+select:focus {
+  outline: 0;
+  box-shadow: 0px 0px 5px $color-silver-chalice;
+}
+
+
+/****************************************** MEDIA QUERIES *********************/
+@media all and (max-width: 550px) {
+  
+  /************************* Dropdown Month Select */
+  select {
+    width: 100%;
+    max-width: none;
+    float: none;
+    margin-top: 10px;
+  }
+  
+}

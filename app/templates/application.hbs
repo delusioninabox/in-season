@@ -1,5 +1,58 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
 {{outlet}}
+
+  <!-- Title -->
+  <h1>What's in Season?</h1>
+  
+  <div class="container">
+    
+    <!-- Begin Options Bar -->
+    <div class="options">
+      
+      <!-- Filters -->
+      <span>Filters: </span>
+      <div class="filter">Vegetables</div>
+      <div class="filter">Fruit</div>
+      <div class="filter">Herbs</div>
+      
+      <!-- Month Select -->
+      <select name="month" id="viewMonth">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      
+    </div>
+    <!-- End Options Bar -->
+    
+    <!-- Begin Displaying Results-->
+    <div class="display">
+      
+      <!-- Begin Result Item -->
+      {{#each model as |item|}}
+          <div class="result">
+              IMG<br/>
+              {{item.name}}
+          </div>
+      {{/each}}
+      <!-- End Result Item -->
+      
+    </div>
+    <!-- End Displaying Results -->
+    
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    $('.filter').on('click', function() {
+      $(this).toggleClass('inactive');
+    });
+  </script>

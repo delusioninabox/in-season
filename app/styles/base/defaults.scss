@@ -1,0 +1,38 @@
+/****************************************** BASIC STYLES *********************/
+
+body {
+  text-align: left;
+  font-family: $font-family-base;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: $color-boulder;
+}
+
+/************************* Outer Container */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/************************* Options Bar */
+.container .options {
+  padding: 10px 0px;
+}
+
+.options span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/************************* Results Display */
+.container .display {
+  clear: both;
+  background: $color-gallery;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}

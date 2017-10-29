@@ -1,0 +1,10 @@
+/****************************************** Result Boxes *********************/
+.display .result {
+  background: $color-white;
+  color: $color-emerald;
+  border: 1px solid $color-boulder;
+  text-align: center;
+  padding: 10px;
+  border-radius: $border-radius;
+  font-weight: bold;
+}

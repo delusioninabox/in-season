@@ -3,10 +3,10 @@ import Ember from "ember";
 export default Ember.Route.extend({  
   
   model: function() {
-      //const store = this.get('produce');
-      //return store.getAllProduce();
+      const data = this.get('produce');
+      return data.getAllProduce();
   },
   
-  //store: Ember.inject.service('produce') <---- Something wrong with this line
+  produce: Ember.inject.service('produce')
 
 });

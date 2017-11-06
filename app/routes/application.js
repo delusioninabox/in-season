@@ -7,6 +7,6 @@ export default Ember.Route.extend({
       return data.getAllProduce();
   },
   
-  produce: Ember.inject.service('produce')
+  produce: Ember.inject.service('produce'),
 
 });

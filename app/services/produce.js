@@ -12,7 +12,9 @@ const produceItems = [
 ];
 
 export default Ember.Service.extend({
+  
   getAllProduce() {
     return produceItems;
-  }
+  },
+  
 });

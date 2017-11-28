@@ -17,4 +17,44 @@ export default Ember.Service.extend({
     return produceItems;
   },
   
+  filterByValueKey(valueToRemove, keyToMatch, objectArray) {
+    
+    let splicedArray = [],
+        count = 0;
+    
+    for( let index = 0; index < objectArray.length; index++ ) {
+      if (objectArray[index][keyToMatch] != valueToRemove) {
+        splicedArray[count] = objectArray[index];
+        count++;
+      }
+      
+    }
+    return splicedArray;
+    
+  },
+  
+  filterResults( veggies, fruits, herbs ) {
+    let fullList = this.getAllProduce(),
+        newList = fullList;
+    
+    console.log("Look ma, I'm filtering!", fullList);
+    
+    if( veggies ) {
+      // Remove 'vegetable' type from list
+      newList = this.filterByValueKey('vegetable', 'type', newList);
+    }
+    
+    if( fruits ) {
+      // Remove 'fruit' type from list
+      newList = this.filterByValueKey('fruit', 'type', newList);
+    }
+    
+    if( herbs ) {
+      // Remove 'fruit' type from list
+      newList = this.filterByValueKey('herb', 'type', newList);
+    }
+    
+    return newList;
+  }
+  
 });

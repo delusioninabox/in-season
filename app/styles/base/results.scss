@@ -7,4 +7,23 @@
   padding: 10px;
   border-radius: $border-radius;
   font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  
+  &.selected {
+    border-color: $color-mountain-meadow;
+    color: $color-mountain-meadow;
+    
+    &:after {
+      content: "✓";
+      background: $color-mountain-meadow;
+      color: #FFF;
+      border-radius: 50%;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+        font-size: 0.8rem;
+      padding: 0rem 0.25rem;
+    }
+  }
 }

@@ -32,8 +32,8 @@
     <div class="display">
 
           <!-- Begin Result Item -->
-          {{#each produceResults as |item|}}
-              <div class="result">
+          {{#each produceResults as |item index|}}
+              <div class="result" data-id={{index}} {{action "toggleSelectedItem" this index}}>
                   IMG<br/>
                   {{item.name}}
               </div>

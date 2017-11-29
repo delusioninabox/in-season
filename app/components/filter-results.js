@@ -11,8 +11,8 @@ export default Component.extend({
     this._super(...arguments);
     const date      = new Date();
     this.set('curMonth', date.getMonth() + 1);
-    let results = this.get('produce').getAllProduce();
-    this.set('produceResults', results );
+    let filter = this.get('produce').filterResults( this.get('curMonth'), this.get('hideVeggies'), this.get('hideFruit'), this.get('hideHerbs') );
+    this.set('produceResults', filter );  
   },
   
   didRender() {
@@ -20,12 +20,18 @@ export default Component.extend({
   },
   
   actions: {
-  
+    
     toggleClass( type ) {
       this.toggleProperty( type );
-      let filter = this.get('produce').filterResults( this.get('hideVeggies'), this.get('hideFruit'), this.get('hideHerbs') );
+      let filter = this.get('produce').filterResults( this.get('curMonth'), this.get('hideVeggies'), this.get('hideFruit'), this.get('hideHerbs') );
       this.set('produceResults', filter );
     },
+    
+    toggleSelectedItem( clickedE, theIndex ) {
+      let clickedElement = clickedE.element;
+      console.log(clickedElement, theIndex);
+      $( clickedElement ).find('.result[data-id=' + theIndex + ']').toggleClass('selected');
+    }
   
   },
   

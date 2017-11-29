@@ -33,11 +33,27 @@ export default Ember.Service.extend({
     
   },
   
-  filterResults( veggies, fruits, herbs ) {
+  filterSearchArray(valueToMatch, keyToMatch, objectArray) {
+    
+    let splicedArray = [],
+        count = 0;
+    
+    for( let index = 0; index < objectArray.length; index++ ) {
+      if (objectArray[index][keyToMatch].includes(valueToMatch)) {
+        splicedArray[count] = objectArray[index];
+        count++;
+      }
+      
+    }
+    return splicedArray;
+    
+  },
+  
+  filterResults( month, veggies, fruits, herbs ) {
     let fullList = this.getAllProduce(),
         newList = fullList;
     
-    console.log("Look ma, I'm filtering!", fullList);
+    newList = this.filterSearchArray( month, 'available', newList );
     
     if( veggies ) {
       // Remove 'vegetable' type from list

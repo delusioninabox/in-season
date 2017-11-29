@@ -37,8 +37,10 @@ export default Ember.Service.extend({
     
     let splicedArray = [],
         count = 0;
+    valueToMatch = parseInt(valueToMatch);
     
     for( let index = 0; index < objectArray.length; index++ ) {
+      
       if (objectArray[index][keyToMatch].includes(valueToMatch)) {
         splicedArray[count] = objectArray[index];
         count++;
@@ -53,7 +55,7 @@ export default Ember.Service.extend({
     let fullList = this.getAllProduce(),
         newList = fullList;
     
-    newList = this.filterSearchArray( month, 'available', newList );
+    newList = this.filterSearchArray( month, 'available', fullList );
     
     if( veggies ) {
       // Remove 'vegetable' type from list
@@ -69,7 +71,7 @@ export default Ember.Service.extend({
       // Remove 'fruit' type from list
       newList = this.filterByValueKey('herb', 'type', newList);
     }
-    
+  
     return newList;
   }
   

@@ -11,9 +11,9 @@
       
       <!-- Month Select -->
       <select name="month" id="viewMonth" onchange={{action "changeMonth" value="target.value"}}>
-        {{#each months as |month|}}        
-           <option value={{month.value}}>{{month.name}}</option>      
-        {{/each}} 
+        {{#each months as |month|}}     
+           <option value={{month.value}} selected={{eq month.value curMonth}}>{{month.name}}</option>      
+        {{/each}}
       </select>
       
     </div>
@@ -25,7 +25,7 @@
           <!-- Begin Result Item -->
           {{#each produceResults as |item index|}}
               <div class="result" data-id={{index}} {{action "toggleSelectedItem" this index}}>
-                  <p class="img">IMG</p>
+                  <p class="img"><img src="{{item.src}}" alt="{{item.name}}" /></p>
                   <p class="title">{{item.name}}</p>
               </div>
           {{/each}}
@@ -34,4 +34,4 @@
     </div>
     <!-- End Displaying Results -->
 
-    <a class="btn" href="https://google.com/search?q={{searchQuery}}+recipes">Find Recipes on Google</a>
+    <p style="text-align: center;"><a class="btn" href="https://google.com/search?q={{searchQuery}}+recipes" target="_blank">Find Recipes on Google</a></p>

@@ -10,6 +10,12 @@ body {
   color: $color-boulder;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
 /************************* Outer Container */
 .container {
   width: 90%;

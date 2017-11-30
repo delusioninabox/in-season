@@ -1,7 +1,8 @@
 /****************************************** OPTIONS *********************/
 
 /************************* Filter Buttons */
-.filter {
+.filter,
+.btn {
   background: $color-emerald;
   color: $color-white;
   padding: 5px 15px;
@@ -16,7 +17,8 @@
   color: #999;
 }
 
-.filter:hover {
+.filter:hover,
+.btn {
   background: $color-mountain-meadow;
   color: $color-white;
 }
@@ -33,6 +35,13 @@
 
 .filter.inactive:before {
   content: "-";
+}
+
+/************************* Button */
+.btn {
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  margin: 2rem auto;
 }
 
 /************************* Dropdown Month Select */

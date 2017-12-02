@@ -78,7 +78,11 @@ span.monthSelect {
 
 
 /****************************************** MEDIA QUERIES *********************/
-@media all and (max-width: 550px) {
+@media all and (max-width: 770px) {
+  
+  span.monthSelect {
+    display: none;
+  }
   
   /************************* Dropdown Month Select */
   select {

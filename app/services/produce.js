@@ -38,7 +38,7 @@ const produceItems = [
   Produce.create({type: 'vegetable', name: 'Winter Squash', src: '../assets/wintersquash.jpg', available: [10, 11, 23]}),
   Produce.create({type: 'vegetable', name: 'Zucchini', src: '../assets/zucchini.jpg', available: [4, 5, 6, 7, 8]}),
   Produce.create({type: 'fruit', name: 'Apples', src: '../assets/apples.jpg', available: [8, 9, 10, 11]}),
-  Produce.create({type: 'fruit', name: 'Avacado', src: '../assets/avacado.jpg', available: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}),
+  Produce.create({type: 'fruit', name: 'Avocado', src: '../assets/avacado.jpg', available: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}),
   Produce.create({type: 'fruit', name: 'Bananas', src: '../assets/bananas.jpg', available: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}),
   Produce.create({type: 'fruit', name: 'Blackberries', src: '../assets/blackberries.jpg', available: [5, 6, 7, 8, 9, 10]}),
   Produce.create({type: 'fruit', name: 'Cranberries', src: '../assets/cranberries.jpg', available: [10, 11]}),

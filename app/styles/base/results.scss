@@ -46,3 +46,14 @@
     }
   }
 }
+
+/* Search Bar */
+.container .display + p {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    background: #FFF;
+    margin: 0;
+}

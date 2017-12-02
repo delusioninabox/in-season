@@ -53,6 +53,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  background: $color-white;
   color: $color-emerald;
   font-weight: bold;
   font-size: 16px;
@@ -62,11 +63,17 @@ select {
   background-size: 22px;
   background-position: 95% center;
   border: 1px solid $color-boulder;
+  
 }
 
 select:focus {
   outline: 0;
   box-shadow: 0px 0px 5px $color-silver-chalice;
+}
+
+span.monthSelect {
+    padding: 6px 0;
+    float: right;
 }
 
 
